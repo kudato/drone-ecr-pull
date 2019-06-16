@@ -1,6 +1,6 @@
 FROM docker:18.09
 
-ADD plugin.sh /
+COPY plugin.sh /
 
 RUN chmod +x /plugin.sh \
     && apk add --no-cache python3 bash \
