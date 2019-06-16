@@ -37,12 +37,14 @@ else
     $(aws ecr get-login --no-include-email --region "${AWS_DEFAULT_REGION}")
 fi
 
+OLDIFS=$IFS
 while IFS=',' read -ra IMAGES; do
     for i in "${IMAGES[@]}"; do
         docker pull $i &
         pull_counter $!
     done
 done <<< "$PLUGIN_IMAGES"
+IFS=$OLDIFS
 
 for i in ${PULL_IMAGES}
 do
