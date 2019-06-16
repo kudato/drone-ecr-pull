@@ -1,6 +1,7 @@
 kind: pipeline
 name: Publish to Docker Hub
 
+steps:
 - name: latest
   image: plugins/docker
   settings:
