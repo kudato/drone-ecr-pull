@@ -1,0 +1,19 @@
+kind: pipeline
+name: Publish to Docker Hub
+
+- name: latest
+  image: plugins/docker
+  settings:
+    repo: kudato/drone-ecr-pull
+    dockerfile: Dockerfile
+    username:
+      from_secret: docker_username
+    password:
+      from_secret: docker_password
+    tags:
+      - latest
+      - ${DRONE_COMMIT_SHA:0:7}
+
+  when:
+    branch:
+    - master
