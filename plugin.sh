@@ -43,7 +43,8 @@ docker_login() {
         auth=${auth% *}
         password=${auth##* }
         echo "$password" | docker login -u AWS \
-                            --password-stdin "$registry"
+                            --password-stdin "$registry" \
+                            > /dev/null 2>/dev/null
     fi
 }
 
