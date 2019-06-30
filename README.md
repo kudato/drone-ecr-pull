@@ -1,6 +1,6 @@
 ## drone-ecr-pull
 
-[![](https://images.microbadger.com/badges/image/kudato/drone-ecr-pull.svg)](https://microbadger.com/images/kudato/drone-ecr-pull "Get info on this image.")
+[![](https://images.microbadger.com/badges/image/kudato/drone-ecr-pull.svg)](https://microbadger.com/images/kudato/drone-ecr-pull "Get information about this image.")
 
 ### Why?
 
